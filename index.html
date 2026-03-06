@@ -10,14 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --black: #080a08;
-      --green: #00e64d;
-      --green-dim: #00b33c;
-      --white: #f0f4f0;
-      --grey: #1a1f1a;
-      --grey-mid: #2e352e;
-      --grey-light: #6b756b;
-      --text-muted: #8a958a;
+      --black: #1a1f1a;
+      --green: #2e9e52;
+      --green-dim: #237a3e;
+      --white: #ffffff;
+      --grey: #f4f6f4;
+      --grey-mid: #dde3dd;
+      --grey-light: #8a9e8a;
+      --text-muted: #5a6e5a;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,8 +25,8 @@
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--black);
       font-family: 'DM Sans', sans-serif;
       font-weight: 300;
       line-height: 1.6;
@@ -81,18 +81,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(to bottom, rgba(8,10,8,0.95), transparent);
+      background: linear-gradient(to bottom, rgba(255,255,255,0.97), transparent);
     }
 
-    .logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.4rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--white);
+    .logo img {
+      height: 38px;
+      width: auto;
+      display: block;
     }
-    .logo span { color: var(--green); }
 
     .nav-cta {
       font-family: 'Barlow Condensed', sans-serif;
@@ -106,7 +102,7 @@
       text-decoration: none;
       transition: background 0.2s, transform 0.15s;
     }
-    .nav-cta:hover { background: var(--white); transform: translateY(-1px); }
+    .nav-cta:hover { background: var(--green-dim); transform: translateY(-1px); }
 
     /* HERO */
     .hero {
@@ -147,7 +143,7 @@
 
     .hero h1 .accent { color: var(--green); }
     .hero h1 .outline {
-      -webkit-text-stroke: 2px var(--white);
+      -webkit-text-stroke: 2px var(--black);
       color: transparent;
     }
 
@@ -161,7 +157,7 @@
       animation: fadeUp 0.7s ease forwards 0.5s;
     }
 
-    .hero-sub strong { color: var(--white); font-weight: 500; }
+    .hero-sub strong { color: var(--black); font-weight: 500; }
 
     .hero-cta-group {
       display: flex;
@@ -187,9 +183,9 @@
       box-shadow: 0 0 0 0 rgba(0,230,77,0);
     }
     .btn-primary:hover {
-      background: var(--white);
+      background: var(--green-dim);
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(0,230,77,0.2);
+      box-shadow: 0 8px 30px rgba(46,158,82,0.2);
     }
 
     .hero-note {
@@ -294,7 +290,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 0.75rem;
-      color: var(--white);
+      color: var(--black);
     }
 
     .step p {
@@ -361,7 +357,7 @@
       font-weight: 900;
       font-size: 4rem;
       line-height: 1;
-      color: var(--white);
+      color: var(--black);
       margin-bottom: 0.25rem;
     }
     .pricing-amount sup {
@@ -420,45 +416,12 @@
 
     /* JOTFORM EMBED */
     .jotform-wrap {
-      background: var(--black);
+      background: var(--white);
       border: 1px solid var(--grey-mid);
       padding: 2.5rem;
     }
 
-    .jotform-placeholder {
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .jotform-placeholder .icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .jotform-placeholder h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-      color: var(--white);
-    }
-    .jotform-placeholder p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-    .jotform-placeholder code {
-      display: block;
-      background: var(--grey);
-      border: 1px solid var(--grey-mid);
-      color: var(--green);
-      font-size: 0.8rem;
-      padding: 1rem 1.5rem;
-      text-align: left;
-      line-height: 1.8;
-      font-family: monospace;
-    }
+
 
     /* FOOTER */
     footer {
@@ -473,14 +436,12 @@
       gap: 1rem;
     }
 
-    .footer-logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+    .footer-logo img {
+      height: 28px;
+      width: auto;
+      display: block;
+      opacity: 0.8;
     }
-    .footer-logo span { color: var(--green); }
 
     .footer-note {
       font-size: 0.75rem;
@@ -517,7 +478,7 @@
 
   <!-- NAV -->
   <nav>
-    <div class="logo">Veo <span>For Hire</span></div>
+    <div class="logo"><img src="logo.png" alt="Veo For Hire" /></div>
     <a href="#register" class="nav-cta">Register Interest</a>
   </nav>
 
@@ -616,36 +577,14 @@
         Tell us about your team and we'll be in touch to confirm availability and lock in your games. No commitment required — just let us know you're interested.
       </p>
       <div class="jotform-wrap">
-        <!--
-          =====================================================
-          REPLACE THIS PLACEHOLDER WITH YOUR JOTFORM EMBED CODE
-          =====================================================
-          1. Go to jotform.com and create your form
-          2. Add fields: Name, Email, Club Name, Role, How many games?
-          3. Click Publish → Embed → Copy the <iframe> or <script> embed code
-          4. Paste it here, replacing everything inside this comment block
-          =====================================================
-        -->
-        <div class="jotform-placeholder">
-          <div class="icon">📋</div>
-          <h3>Form Embed Goes Here</h3>
-          <p>Replace this placeholder with your Jotform embed code.<br/>Suggested fields for your form:</p>
-          <code>
-            → Your Name (text)<br/>
-            → Email Address (email)<br/>
-            → Club Name (text)<br/>
-            → Your Role — Coach / Manager / Coordinator (dropdown)<br/>
-            → Approx. games per season (number or dropdown)<br/>
-            → Anything else? (optional text area)
-          </code>
-        </div>
+        <script type="text/javascript" src="https://form.jotform.com/jsform/260646446846063"></script>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Veo <span>For Hire</span></div>
+    <div class="footer-logo"><img src="logo.png" alt="Veo For Hire" /></div>
     <p class="footer-note">Junior soccer filming · Victoria, Australia · veoforhire.com.au</p>
   </footer>
 
