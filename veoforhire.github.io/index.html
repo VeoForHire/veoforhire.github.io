@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veo For Hire — Junior Soccer Game Footage, Victoria</title>
+  <meta name="description" content="Professional junior soccer game filming in Victoria. We attend, set up, record and deliver full match footage. From $100/game." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #080a08;
+      --green: #00e64d;
+      --green-dim: #00b33c;
+      --white: #f0f4f0;
+      --grey: #1a1f1a;
+      --grey-mid: #2e352e;
+      --grey-light: #6b756b;
+      --text-muted: #8a958a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NOISE TEXTURE OVERLAY */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* FIELD LINE BACKGROUND */
+    .field-lines {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+      opacity: 0.04;
+    }
+    .field-lines::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px; height: 300px;
+      border: 2px solid var(--green);
+      border-radius: 50%;
+    }
+    .field-lines::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 2px; height: 100%;
+      background: var(--green);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(8,10,8,0.95), transparent);
+    }
+
+    .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .logo span { color: var(--green); }
+
+    .nav-cta {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--green);
+      padding: 0.5rem 1.25rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: var(--white); transform: translateY(-1px); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 2rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.2s;
+    }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      line-height: 0.92;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.35s;
+    }
+
+    .hero h1 .accent { color: var(--green); }
+    .hero h1 .outline {
+      -webkit-text-stroke: 2px var(--white);
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.5s;
+    }
+
+    .hero-sub strong { color: var(--white); font-weight: 500; }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.65s;
+    }
+
+    .btn-primary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--green);
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 0 0 0 rgba(0,230,77,0);
+    }
+    .btn-primary:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,230,77,0.2);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--grey-light);
+      letter-spacing: 0.05em;
+    }
+
+    /* SCROLL INDICATOR */
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 1s;
+    }
+    .scroll-hint span {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+    }
+    .scroll-line {
+      width: 40px;
+      height: 1px;
+      background: var(--grey-mid);
+      position: relative;
+      overflow: hidden;
+    }
+    .scroll-line::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: var(--green);
+      animation: scanline 2s ease infinite;
+    }
+
+    /* HOW IT WORKS */
+    .section {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 3.5rem;
+    }
+
+    /* STEPS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+      border: 1px solid var(--grey-mid);
+    }
+
+    .step {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--grey-mid);
+      position: relative;
+      transition: background 0.3s;
+    }
+    .step:last-child { border-right: none; }
+    .step:hover { background: var(--grey); }
+
+    .step-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+      color: var(--grey-mid);
+      line-height: 1;
+      margin-bottom: 1rem;
+      transition: color 0.3s;
+    }
+    .step:hover .step-num { color: var(--green); }
+
+    .step h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      color: var(--white);
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* DIVIDER */
+    .divider {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 1px;
+      background: var(--grey-mid);
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .pricing-card {
+      border: 1px solid var(--grey-mid);
+      padding: 2.5rem;
+      position: relative;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .pricing-card:hover {
+      border-color: var(--green);
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: var(--green);
+      background: rgba(0,230,77,0.04);
+    }
+    .pricing-card.featured::before {
+      content: 'POPULAR';
+      position: absolute;
+      top: -1px; right: 1.5rem;
+      background: var(--green);
+      color: var(--black);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      padding: 0.25rem 0.75rem;
+    }
+
+    .pricing-type {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-amount {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+    .pricing-amount sup {
+      font-size: 1.5rem;
+      vertical-align: super;
+    }
+
+    .pricing-per {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    .pricing-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .pricing-features li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .pricing-features li::before {
+      content: '→';
+      color: var(--green);
+      flex-shrink: 0;
+      margin-top: 0.05em;
+    }
+
+    /* EOI SECTION */
+    .eoi-section {
+      position: relative;
+      z-index: 1;
+      background: var(--grey);
+      padding: 6rem 2rem;
+    }
+
+    .eoi-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .eoi-intro {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    /* JOTFORM EMBED */
+    .jotform-wrap {
+      background: var(--black);
+      border: 1px solid var(--grey-mid);
+      padding: 2.5rem;
+    }
+
+    .jotform-placeholder {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .jotform-placeholder .icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .jotform-placeholder h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      color: var(--white);
+    }
+    .jotform-placeholder p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .jotform-placeholder code {
+      display: block;
+      background: var(--grey);
+      border: 1px solid var(--grey-mid);
+      color: var(--green);
+      font-size: 0.8rem;
+      padding: 1rem 1.5rem;
+      text-align: left;
+      line-height: 1.8;
+      font-family: monospace;
+    }
+
+    /* FOOTER */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--grey-mid);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .footer-logo span { color: var(--green); }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: var(--grey-light);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scanline {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 640px) {
+      .steps { grid-template-columns: 1fr; }
+      .step { border-right: none; border-bottom: 1px solid var(--grey-mid); }
+      .step:last-child { border-bottom: none; }
+      nav { padding: 1rem; }
+      .hero { padding: 7rem 1.25rem 4rem; }
+      .section { padding: 4rem 1.25rem; }
+      .eoi-section { padding: 4rem 1.25rem; }
+      .jotform-wrap { padding: 1.5rem; }
+      footer { padding: 1.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="field-lines" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">Veo <span>For Hire</span></div>
+    <a href="#register" class="nav-cta">Register Interest</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">⚽ Junior Soccer · Victoria, Australia</p>
+    <h1>
+      Your Kids'<br/>
+      <span class="accent">Games.</span><br/>
+      <span class="outline">On Camera.</span>
+    </h1>
+    <p class="hero-sub">
+      Professional match footage for junior soccer teams across Victoria — using the <strong>Veo Cam3</strong>. We show up, set up, record, and deliver a link to your full game. <strong>No fuss. No tech headaches.</strong>
+    </p>
+    <div class="hero-cta-group">
+      <a href="#register" class="btn-primary">Register Your Interest</a>
+      <span class="hero-note">Free to enquire · No commitment</span>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>How it works</span>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <p class="section-label">The process</p>
+    <h2 class="section-title">Simple as that.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>You Book</h3>
+        <p>Register your interest below. We'll confirm availability for your game day and lock in the details with your team manager.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We Show Up</h3>
+        <p>We arrive before kickoff, set up the Veo Cam3 on the touchline, and handle everything. Nothing for your coach or manager to do.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Game Recorded</h3>
+        <p>The Veo Cam3 automatically tracks the ball and captures the full match in high definition. AI-powered, wide angle, no operator needed mid-game.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Link Delivered</h3>
+        <p>After the game, your team manager gets a direct link to the full footage via the Veo platform. Watch, share and review anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PRICING -->
+  <section class="section">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Flat rate.<br/>One invoice.</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <p class="pricing-type">Recreational</p>
+        <div class="pricing-amount"><sup>$</sup>100</div>
+        <p class="pricing-per">per game · billed to team manager</p>
+        <ul class="pricing-features">
+          <li>Full match recording</li>
+          <li>Footage link delivered post-game</li>
+          <li>We handle all setup & packdown</li>
+          <li>No app setup required from you</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <p class="pricing-type">Competitive &amp; Travel</p>
+        <div class="pricing-amount"><sup>$</sup>150</div>
+        <p class="pricing-per">per game · billed to team manager</p>
+        <ul class="pricing-features">
+          <li>Full match recording</li>
+          <li>Footage link delivered post-game</li>
+          <li>We handle all setup &amp; packdown</li>
+          <li>No app setup required from you</li>
+          <li>Priority booking availability</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EOI / JOTFORM -->
+  <section class="eoi-section" id="register">
+    <div class="eoi-inner">
+      <p class="section-label">Expression of Interest</p>
+      <h2 class="section-title">Get your<br/><span style="color:var(--green)">season filmed.</span></h2>
+      <p class="eoi-intro">
+        Tell us about your team and we'll be in touch to confirm availability and lock in your games. No commitment required — just let us know you're interested.
+      </p>
+      <div class="jotform-wrap">
+        <!--
+          =====================================================
+          REPLACE THIS PLACEHOLDER WITH YOUR JOTFORM EMBED CODE
+          =====================================================
+          1. Go to jotform.com and create your form
+          2. Add fields: Name, Email, Club Name, Role, How many games?
+          3. Click Publish → Embed → Copy the <iframe> or <script> embed code
+          4. Paste it here, replacing everything inside this comment block
+          =====================================================
+        -->
+        <div class="jotform-placeholder">
+          <div class="icon">📋</div>
+          <h3>Form Embed Goes Here</h3>
+          <p>Replace this placeholder with your Jotform embed code.<br/>Suggested fields for your form:</p>
+          <code>
+            → Your Name (text)<br/>
+            → Email Address (email)<br/>
+            → Club Name (text)<br/>
+            → Your Role — Coach / Manager / Coordinator (dropdown)<br/>
+            → Approx. games per season (number or dropdown)<br/>
+            → Anything else? (optional text area)
+          </code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Veo <span>For Hire</span></div>
+    <p class="footer-note">Junior soccer filming · Victoria, Australia · veoforhire.com.au</p>
+  </footer>
+
+</body>
+</html>
