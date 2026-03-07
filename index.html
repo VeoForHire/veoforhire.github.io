@@ -470,6 +470,19 @@
       .jotform-wrap { padding: 1.5rem; }
       footer { padding: 1.5rem 1.25rem; }
     }
+
+    .pricing-features li.extra::before {
+      content: '+';
+      color: var(--green);
+      flex-shrink: 0;
+      margin-top: 0.05em;
+      margin-left: 5px;
+    }
+    .pricing-features li strong {
+      font-weight: 700;
+      color: var(--black);
+      margin-left: -8px;
+    }
   </style>
 </head>
 <body>
@@ -545,13 +558,11 @@
         <div class="pricing-amount"><sup>$</sup>150</div>
         <p class="pricing-per">per game</p>
         <ul class="pricing-features">
-          <li>Full match recording</li>
-          <li>Footage link delivered post-game</li>
-          <li>We handle all setup &amp; packdown</li>
-          <li>Automatic event detection (goals, shots flagged automatically)</li>
-          <li>Player of the Match</li>
-          <li>Speedrun (condensed match view — removes dead time)</li>
-          <li>Download full match</li>
+          <li>Everything in <strong>Recreational</strong></li>
+          <li class="extra">Automatic event &amp; goal detection</li>
+          <li class="extra">Player of the Match</li>
+          <li class="extra">Speedrun — condensed match, dead time removed</li>
+          <li class="extra">Full match download</li>
         </ul>
       </div>
     </div>
