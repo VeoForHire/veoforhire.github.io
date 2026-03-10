@@ -3,8 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veo For Hire — Junior Soccer Game Footage</title>
-  <meta name="description" content="Professional junior soccer game filming across Melbourne's north and west. We attend, set up and record using the Veo Cam3 — full match footage delivered after the game. From $100/game." />
+
+  <!-- SEO: Keyword-rich title -->
+  <title>Veo Camera Hire Melbourne | Junior Soccer Match Filming</title>
+
+  <!-- SEO: Descriptive meta description with keywords -->
+  <meta name="description" content="Veo camera hire for junior soccer in Melbourne's North and West. We attend, film and deliver full match footage from $100/game. Serving Craigieburn, Essendon, Sunbury, Werribee and surrounding areas." />
+
+  <!-- SEO: Canonical URL -->
+  <link rel="canonical" href="https://veoforhire.com.au/" />
+
+  <!-- SEO: Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- SEO: Open Graph (helps when shared on Facebook/soccer group pages) -->
+  <meta property="og:title" content="Veo Camera Hire Melbourne | Junior Soccer Match Filming" />
+  <meta property="og:description" content="Professional Veo camera hire for junior soccer teams across Melbourne's North and West. We show up, record and deliver. From $100/game." />
+  <meta property="og:url" content="https://veoforhire.com.au/" />
+  <meta property="og:type" content="website" />
+
+  <!-- SEO: LocalBusiness structured data — tells Google exactly who and where you are -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Veo For Hire",
+    "description": "Veo camera hire for junior soccer match filming across Melbourne's North and West. We attend your game, set up and record, and deliver full match footage.",
+    "url": "https://veoforhire.com.au",
+    "areaServed": [
+      "Craigieburn", "Sunbury", "Essendon", "Werribee", "Roxburgh Park",
+      "Taylors Lakes", "Caroline Springs", "Keilor", "Broadmeadows",
+      "Coburg", "Preston", "Bundoora", "Mill Park", "Epping", "Whittlesea",
+      "Melbourne North", "Melbourne West"
+    ],
+    "serviceType": "Veo Camera Hire, Soccer Match Filming, Junior Sports Videography",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Recreational Match Filming",
+        "price": "100",
+        "priceCurrency": "AUD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Competitive Match Filming",
+        "price": "150",
+        "priceCurrency": "AUD"
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,11 +149,11 @@
 
     .nav-cta {
       font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 0.85rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--black);
+      color: var(--white);
       background: var(--green);
       padding: 0.5rem 1.25rem;
       text-decoration: none;
@@ -394,11 +450,40 @@
       margin-top: 0.05em;
     }
 
+    /* AREAS SECTION */
+    .areas-section {
+      position: relative;
+      z-index: 1;
+      background: var(--grey);
+      padding: 3rem 2rem;
+    }
+    .areas-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .areas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+    .area-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--grey-mid);
+      background: var(--white);
+      padding: 0.35rem 0.85rem;
+    }
+
     /* EOI SECTION */
     .eoi-section {
       position: relative;
       z-index: 1;
-      background: var(--grey);
+      background: var(--white);
       padding: 3rem 2rem;
     }
 
@@ -421,8 +506,6 @@
       border: 1px solid var(--grey-mid);
       padding: 2.5rem;
     }
-
-
 
     /* FOOTER */
     footer {
@@ -468,6 +551,7 @@
       .hero { padding: 8rem 1.25rem 4rem; }
       .section { padding: 4rem 1.25rem; }
       .eoi-section { padding: 4rem 1.25rem; }
+      .areas-section { padding: 3rem 1.25rem; }
       .jotform-wrap { padding: 1.5rem; }
       footer { padding: 1.5rem 1.25rem; }
     }
@@ -492,25 +576,31 @@
 
   <!-- NAV -->
   <nav>
-    <div class="logo"><img src="logo.png" alt="Veo For Hire" /></div>
+    <div class="logo"><img src="logo.png" alt="Veo For Hire — Veo Camera Hire Melbourne" /></div>
+    <a href="#register" class="nav-cta">Book Now</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
+    <!-- SEO: Eyebrow text — keyword-rich, visible to Google -->
+    <p class="hero-eyebrow">Veo Camera Hire · Melbourne North &amp; West · Junior Soccer</p>
     <h1>
       Nothing Missed,<br/>
       <span class="accent">Everything</span><br/>
       <span class="outline">Captured.</span>
     </h1>
     <p class="hero-sub">
-      Looking for <strong>Veo</strong> camera hire in Melbourne? We bring the camera to you. Professional match footage for junior soccer teams across <strong>Melbourne's North and West</strong>. We show up, record and deliver a link to your full game. You focus on the game. We handle the rest.
+      Looking for <strong>Veo camera hire in Melbourne</strong>? We bring the camera to you. Professional match footage for junior soccer teams across <strong>Melbourne's North and West</strong>. We show up, record and deliver a link to your full game. You focus on the game. We handle the rest.
     </p>
+    <div class="hero-cta-group">
+      <a href="#register" class="btn-primary">Register Interest</a>
+      <span class="hero-note">No commitment required</span>
+    </div>
   </section>
   <div class="divider"></div>
 
   <!-- HOW IT WORKS -->
   <section class="section">
-    
     <p class="section-label">The process</p>
     <h2 class="section-title">We keep it simple</h2>
     <div class="steps">
@@ -522,7 +612,7 @@
       <div class="step">
         <div class="step-num">02</div>
         <h3>We Record</h3>
-        <p>We arrive before kickoff, set up the Veo and handle everything. Nothing for your coach or manager to do.</p>
+        <p>We arrive before kickoff, set up the Veo camera and handle everything. Nothing for your coach or manager to do.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
@@ -537,7 +627,7 @@
   <!-- PRICING -->
   <section class="section">
     <p class="section-label">Pricing</p>
-    <h2 class="section-title">Flat rates<br/></h2>
+    <h2 class="section-title">Flat rates</h2>
     <div class="pricing-grid">
       <div class="pricing-card">
         <p class="pricing-type">Recreational</p>
@@ -546,7 +636,7 @@
         <ul class="pricing-features">
           <li>Full match recording</li>
           <li>Footage link delivered post-game</li>
-          <li>We handle all setup & packdown</li>
+          <li>We handle all setup &amp; packdown</li>
         </ul>
       </div>
       <div class="pricing-card featured">
@@ -562,8 +652,41 @@
         </ul>
       </div>
     </div>
-    <div></div>
-    <p><em>* We are currently only servicing junior soccer clubs across Melbourne's North and West.</em></p>
+    <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--text-muted);"><em>* We are currently only servicing junior soccer clubs across Melbourne's North and West.</em></p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- AREAS WE SERVE — SEO: suburb names on page -->
+  <section class="areas-section">
+    <div class="areas-inner">
+      <p class="section-label">Where we operate</p>
+      <h2 class="section-title">Melbourne North &amp; West</h2>
+      <p style="color:var(--text-muted); max-width:560px; font-size:0.95rem; line-height:1.7;">
+        We service junior soccer clubs and teams across Melbourne's northern and western suburbs. If your ground is nearby, we can film your game.
+      </p>
+      <div class="areas-grid" aria-label="Suburbs we service for Veo camera hire">
+        <span class="area-tag">Craigieburn</span>
+        <span class="area-tag">Sunbury</span>
+        <span class="area-tag">Essendon</span>
+        <span class="area-tag">Werribee</span>
+        <span class="area-tag">Roxburgh Park</span>
+        <span class="area-tag">Taylors Lakes</span>
+        <span class="area-tag">Caroline Springs</span>
+        <span class="area-tag">Keilor</span>
+        <span class="area-tag">Broadmeadows</span>
+        <span class="area-tag">Coburg</span>
+        <span class="area-tag">Preston</span>
+        <span class="area-tag">Bundoora</span>
+        <span class="area-tag">Mill Park</span>
+        <span class="area-tag">Epping</span>
+        <span class="area-tag">Whittlesea</span>
+        <span class="area-tag">Pascoe Vale</span>
+        <span class="area-tag">Glenroy</span>
+        <span class="area-tag">Sydenham</span>
+      </div>
+      <p style="margin-top:1.25rem; font-size:0.8rem; color:var(--grey-light);">Not sure if we cover your area? Get in touch — we're expanding.</p>
+    </div>
   </section>
 
   <div class="divider"></div>
@@ -585,7 +708,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo"><img src="logo.png" alt="Veo For Hire" /></div>
-    <p class="footer-note">veoforhire.com.au</p>
+    <p class="footer-note">veoforhire.com.au &nbsp;·&nbsp; Veo camera hire for junior soccer in Melbourne</p>
   </footer>
 
 </body>
