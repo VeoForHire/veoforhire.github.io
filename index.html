@@ -3,64 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO: Keyword-rich title -->
   <title>Veo Camera Hire Melbourne | Junior Soccer Match Filming</title>
-
-  <!-- SEO: Descriptive meta description with keywords -->
   <meta name="description" content="Veo camera hire for junior soccer in Melbourne's North and West. We attend, film and deliver full match footage from $100/game. Serving Craigieburn, Essendon, Sunbury, Werribee and surrounding areas." />
-
-  <!-- SEO: Canonical URL -->
   <link rel="canonical" href="https://veoforhire.com.au/" />
-
-  <!-- SEO: Robots -->
   <meta name="robots" content="index, follow" />
-
-  <!-- SEO: Open Graph (helps when shared on Facebook/soccer group pages) -->
   <meta property="og:title" content="Veo Camera Hire Melbourne | Junior Soccer Match Filming" />
   <meta property="og:description" content="Professional Veo camera hire for junior soccer teams across Melbourne's North and West. We show up, record and deliver. From $100/game." />
   <meta property="og:url" content="https://veoforhire.com.au/" />
   <meta property="og:type" content="website" />
-
-  <!-- SEO: LocalBusiness structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Veo For Hire",
-    "description": "Veo camera hire for junior soccer match filming across Melbourne's North and West. We attend your game, set up and record, and deliver full match footage.",
+    "description": "Veo camera hire for junior soccer match filming across Melbourne's North and West.",
     "url": "https://veoforhire.com.au",
-    "areaServed": [
-      "Craigieburn", "Sunbury", "Essendon", "Werribee", "Roxburgh Park",
-      "Taylors Lakes", "Caroline Springs", "Keilor", "Broadmeadows",
-      "Coburg", "Preston", "Bundoora", "Mill Park", "Epping", "Whittlesea",
-      "Melbourne North", "Melbourne West"
-    ],
+    "areaServed": ["Craigieburn","Sunbury","Essendon","Werribee","Roxburgh Park","Taylors Lakes","Caroline Springs","Keilor","Broadmeadows","Coburg","Preston","Bundoora","Mill Park","Epping","Whittlesea","Melbourne North","Melbourne West"],
     "serviceType": "Veo Camera Hire, Soccer Match Filming, Junior Sports Videography",
     "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
+    "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
     "offers": [
-      {
-        "@type": "Offer",
-        "name": "Recreational Match Filming",
-        "price": "100",
-        "priceCurrency": "AUD"
-      },
-      {
-        "@type": "Offer",
-        "name": "Competitive Match Filming",
-        "price": "150",
-        "priceCurrency": "AUD"
-      }
+      { "@type": "Offer", "name": "Recreational Match Filming", "price": "100", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "Competitive Match Filming", "price": "150", "priceCurrency": "AUD" }
     ]
   }
   </script>
-
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,416 +46,107 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--white);
-      color: var(--black);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+    body { background: var(--white); color: var(--black); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; }
 
     body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
+      content: ''; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.4;
+      pointer-events: none; z-index: 0; opacity: 0.4;
     }
 
-    .field-lines {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-      opacity: 0.04;
-    }
-    .field-lines::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px; height: 300px;
-      border: 2px solid var(--green);
-      border-radius: 50%;
-    }
-    .field-lines::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 2px; height: 100%;
-      background: var(--green);
-    }
+    .field-lines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; opacity: 0.04; }
+    .field-lines::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; border: 2px solid var(--green); border-radius: 50%; }
+    .field-lines::after { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: var(--green); }
 
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 1.25rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.97), transparent);
-    }
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(255,255,255,0.97), transparent); }
     .logo img { height: 38px; width: auto; display: block; }
-    .nav-cta {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 500;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--green);
-      padding: 0.5rem 1.25rem;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-    }
+    .nav-cta { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--green); padding: 0.5rem 1.25rem; text-decoration: none; transition: background 0.2s, transform 0.15s; }
     .nav-cta:hover { background: var(--green-dim); transform: translateY(-1px); }
 
-    .hero {
-      position: relative;
-      z-index: 1;
-      min-height: unset;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0;
-      overflow: hidden;
-    }
-    .hero-eyebrow {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 0.6s ease forwards 0.2s;
-    }
-    .hero h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(3.5rem, 10vw, 8rem);
-      line-height: 0.92;
-      text-transform: uppercase;
-      letter-spacing: -0.01em;
-      margin-bottom: 2rem;
-      opacity: 0;
-      animation: fadeUp 0.7s ease forwards 0.35s;
-    }
+    /* HERO */
+    .hero { position: relative; z-index: 1; min-height: unset; display: flex; flex-direction: column; justify-content: center; padding: 0; overflow: hidden; }
+    .hero-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--green); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.6s ease forwards 0.2s; }
+    .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.92; text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.35s; }
     .hero h1 .accent { color: var(--green); }
     .hero h1 .outline { -webkit-text-stroke: 2px var(--black); color: transparent; }
-    .hero-sub {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      max-width: 520px;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeUp 0.7s ease forwards 0.5s;
-    }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 520px; line-height: 1.7; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.5s; }
     .hero-sub strong { color: var(--black); font-weight: 500; }
-    .hero-cta-group {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.7s ease forwards 0.65s;
-    }
-    .btn-primary {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--green);
-      padding: 1rem 2.5rem;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    }
-    .btn-primary:hover {
-      background: var(--green-dim);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(46,158,82,0.2);
-    }
+    .hero-cta-group { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s ease forwards 0.65s; }
+    .btn-primary { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--green); padding: 1rem 2.5rem; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; }
+    .btn-primary:hover { background: var(--green-dim); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(46,158,82,0.2); }
     .hero-note { font-size: 0.8rem; color: var(--grey-light); letter-spacing: 0.05em; }
 
-    .scroll-hint {
-      position: absolute;
-      bottom: 2rem; left: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      opacity: 0;
-      animation: fadeUp 0.7s ease forwards 1s;
-    }
-    .scroll-hint span { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-light); }
-    .scroll-line { width: 40px; height: 1px; background: var(--grey-mid); position: relative; overflow: hidden; }
-    .scroll-line::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: var(--green);
-      animation: scanline 2s ease infinite;
-    }
+    /* SHARED SECTION STYLES */
+    /* Full-width wrapper with background */
+    .band-white { background: var(--white); }
+    .band-grey { background: var(--grey); }
 
-    .section {
-      position: relative;
-      z-index: 1;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-    .section-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 600;
-      font-size: 1.04rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      text-transform: uppercase;
-      line-height: 1;
-      margin-bottom: 3.5rem;
-    }
+    /* Inner content constraint */
+    .inner { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; position: relative; z-index: 1; }
+    .inner-800 { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; position: relative; z-index: 1; }
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0;
-      border: 1px solid var(--grey-mid);
-    }
-    .step {
-      padding: 2.5rem 2rem;
-      border-right: 1px solid var(--grey-mid);
-      position: relative;
-      transition: background 0.3s;
-    }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.04rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.5rem); text-transform: uppercase; line-height: 1; margin-bottom: 3.5rem; }
+
+    /* STEPS */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; border: 1px solid var(--grey-mid); }
+    .step { padding: 2.5rem 2rem; border-right: 1px solid var(--grey-mid); position: relative; transition: background 0.3s; background: var(--white); }
     .step:last-child { border-right: none; }
-    .step:hover, .step.active { background: var(--grey); }
-    .step-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 4rem;
-      color: var(--grey-mid);
-      line-height: 1;
-      margin-bottom: 1rem;
-      transition: color 0.3s;
-    }
+    .step:hover, .step.active { background: var(--grey-mid); }
+    .step-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; color: var(--grey-mid); line-height: 1; margin-bottom: 1rem; transition: color 0.3s; }
     .step:hover .step-num, .step.active .step-num { color: var(--green); }
-    .step h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-      color: var(--black);
-    }
+    .step h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; color: var(--black); }
     .step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
     .divider { position: relative; z-index: 1; width: 100%; height: 1px; background: var(--grey-mid); }
 
-    /* WHY US SECTION */
-    .why-section {
-      position: relative;
-      z-index: 1;
-      background: var(--grey);
-      padding: 3rem 2rem;
-    }
-    .why-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .why-card {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .why-card .why-icon {
-      font-size: 1.75rem;
-      margin-bottom: 0.25rem;
-    }
-    .why-card h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--black);
-    }
-    .why-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-    /* VIDEO SECTION */
-    .video-section {
-      position: relative;
-      z-index: 1;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-    .video-wrap {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border: 1px solid var(--grey-mid);
-    }
-    .video-wrap iframe {
-      position: relative;
-      padding-bottom: 56.25%;
-      width: 100%;
-      height: 0;
-      overflow: hidden
-    }
+    /* WHY US */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .why-card { display: flex; flex-direction: column; gap: 0.5rem; }
+    .why-card h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--black); }
+    .why-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .pricing-card {
-      border: 1px solid var(--grey-mid);
-      padding: 2.5rem;
-      position: relative;
-      transition: border-color 0.3s, transform 0.3s;
-    }
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .pricing-card { border: 1px solid var(--grey-mid); padding: 2.5rem; position: relative; transition: border-color 0.3s, transform 0.3s; }
     .pricing-card:hover { border-color: var(--green); transform: translateY(-4px); }
     .pricing-card.featured { border-color: var(--green); background: rgba(0,230,77,0.04); }
-    .pricing-card.featured::before {
-      content: 'POPULAR';
-      position: absolute;
-      top: -1px; right: 1.5rem;
-      background: var(--green);
-      color: var(--white);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      padding: 0.25rem 0.75rem;
-    }
-    .pricing-type {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 600;
-      font-size: 0.99rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1rem;
-    }
-    .pricing-amount {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 4rem;
-      line-height: 1;
-      color: var(--black);
-      margin-bottom: 0.25rem;
-    }
+    .pricing-card.featured::before { content: 'POPULAR'; position: absolute; top: -1px; right: 1.5rem; background: var(--green); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.25rem 0.75rem; }
+    .pricing-type { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.99rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
+    .pricing-amount { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; line-height: 1; color: var(--black); margin-bottom: 0.25rem; }
     .pricing-amount sup { font-size: 1.5rem; vertical-align: super; }
     .pricing-per { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2rem; letter-spacing: 0.05em; }
     .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-    .pricing-features li {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
+    .pricing-features li { font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 0.75rem; }
     .pricing-features li::before { content: '→'; color: var(--green); flex-shrink: 0; margin-top: 0.05em; }
     .pricing-features li.extra::before { content: '+'; margin-left: 5px; }
     .pricing-features li strong { font-weight: 700; color: var(--black); margin-left: -8px; }
-    .pricing-note {
-      max-width: 750px;
-      margin: 0.25rem auto 3rem;
-      padding: 1.25rem 1.5rem;
-      background: rgba(46, 158, 82, 0.08);
-      border-left: 4px solid var(--green);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--black);
-      line-height: 1.6;
-      border-radius: 0 4px 4px 0;
-    }
+    .pricing-note { max-width: 750px; margin: 0.25rem auto 3rem; padding: 1.25rem 1.5rem; background: rgba(46,158,82,0.08); border-left: 4px solid var(--green); font-size: 0.95rem; font-weight: 700; color: var(--black); line-height: 1.6; border-radius: 0 4px 4px 0; }
 
-    .areas-section { position: relative; z-index: 1; background: var(--grey); padding: 3rem 2rem; }
-    .areas-inner { max-width: 1100px; margin: 0 auto; }
+    /* AREAS */
     .areas-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
-    .area-tag {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      border: 1px solid var(--grey-mid);
-      background: var(--white);
-      padding: 0.35rem 0.85rem;
-    }
+    .area-tag { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--grey-mid); background: var(--white); padding: 0.35rem 0.85rem; }
 
-    .eoi-section { position: relative; z-index: 1; background: var(--white); padding: 3rem 2rem; }
-    .eoi-inner { max-width: 800px; margin: 0 auto; }
-    .eoi-intro { font-size: 1rem; color: var(--text-muted); max-width: 520px; margin-bottom: 3rem; line-height: 1.7; }
+    /* JOTFORM */
     .jotform-wrap { background: var(--white); border: 1px solid var(--grey-mid); padding: 2.5rem 0; overflow: visible; }
+    .eoi-intro { font-size: 1rem; color: var(--text-muted); max-width: 520px; margin-bottom: 3rem; line-height: 1.7; }
 
-    footer {
-      position: relative;
-      z-index: 1;
-      border-top: 1px solid var(--grey-mid);
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+    /* FOOTER */
+    footer { position: relative; z-index: 1; border-top: 1px solid var(--grey-mid); padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
     .footer-logo img { height: 28px; width: auto; display: block; opacity: 0.8; }
     .footer-note { font-size: 0.75rem; color: var(--grey-light); }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes scanline {
-      0% { left: -100%; }
-      100% { left: 100%; }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scanline { 0% { left: -100%; } 100% { left: 100%; } }
 
     @media (max-width: 640px) {
       .steps { grid-template-columns: 1fr; }
       .step { border-right: none; border-bottom: 1px solid var(--grey-mid); }
       .step:last-child { border-bottom: none; }
       nav { padding: 1rem; }
-      .hero { padding: 8rem 1.25rem 4rem; }
-      .section { padding: 4rem 1.25rem; }
-      .video-section { padding: 3rem 1.25rem; }
-      .eoi-section { padding: 4rem 1.25rem; }
-      .areas-section { padding: 3rem 1.25rem; }
-      .jotform-wrap { padding: 1.5rem; }
+      .inner { padding: 3rem 1.25rem; }
+      .inner-800 { padding: 3rem 1.25rem; }
       footer { padding: 1.5rem 1.25rem; }
     }
   </style>
@@ -503,49 +161,44 @@
     <a href="#register" class="nav-cta">Book Now</a>
   </nav>
 
-  <!-- HERO -->
-  <!-- HERO -->
-<section class="hero">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0.2;">
-    <source src="sample.mp4" type="video/mp4">
-  </video>
-  <div style="position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:8rem 2rem 4rem; width:100%;">
-    <p class="hero-eyebrow">Veo Camera Hire · Melbourne North &amp; West · Junior Soccer</p>
-    <h1>
-      Nothing Missed,<br/>
-      <span class="accent">Everything</span><br/>
-      <span class="outline">Captured.</span>
-    </h1>
-    <p class="hero-sub">
-      Looking for <strong>Veo camera hire in Melbourne</strong>? We bring the camera to you. Professional match footage for junior soccer teams across <strong>Melbourne's North and West</strong>. We show up, record and deliver a link to your full game. You focus on the game. We handle the rest.
-    </p>
-    <div class="hero-cta-group">
-      <a href="#register" class="btn-primary">Register Interest</a>
-      <span class="hero-note">No commitment required</span>
+  <!-- HERO — white background, video overlay -->
+  <section class="hero">
+    <video autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0.2;">
+      <source src="sample.mp4" type="video/mp4">
+    </video>
+    <div style="position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:8rem 2rem 4rem; width:100%;">
+      <p class="hero-eyebrow">Veo Camera Hire · Melbourne North &amp; West · Junior Soccer</p>
+      <h1>
+        Nothing Missed,<br/>
+        <span class="accent">Everything</span><br/>
+        <span class="outline">Captured.</span>
+      </h1>
+      <p class="hero-sub">
+        Looking for <strong>Veo camera hire in Melbourne</strong>? We bring the camera to you. Professional match footage for junior soccer teams across <strong>Melbourne's North and West</strong>. We show up, record and deliver a link to your full game. You focus on the game. We handle the rest.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#register" class="btn-primary">Register Interest</a>
+        <span class="hero-note">No commitment required</span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <div class="divider"></div>
-  <!-- WHY US -->
-  <section class="why-section">
-    <div class="why-inner">
+
+  <!-- WHY US — grey -->
+  <div class="band-grey">
+    <div class="inner">
       <p class="section-label">Why us</p>
       <h2 class="section-title">Professional footage.<br/>Without the price tag.</h2>
       <p style="color:var(--text-muted); max-width:580px; font-size:0.95rem; line-height:1.7; margin-bottom:0;">
-        A Veo Cam3 setup costs over <strong style="color:var(--black);">$4,000</strong> — most junior clubs and teams simply can't justify that. We've done that part so you don't have to. Our <strong style="color:var(--black);">Recreational</strong> package delivers professional footage straight to your coach. Step up to our <strong style="color:var(--black);">Competitive</strong> package and unlock AI-powered match analytics — shot maps, heatmaps, possession stats, player tracking and more. 
+        A Veo Cam3 setup costs over <strong style="color:var(--black);">$4,000</strong> — most junior clubs and teams simply can't justify that. We've done that part so you don't have to. Our <strong style="color:var(--black);">Recreational</strong> package delivers professional footage straight to your coach. Step up to our <strong style="color:var(--black);">Competitive</strong> package and unlock AI-powered match analytics — shot maps, heatmaps, possession stats, player tracking and more.
       </p>
       <div class="why-grid">
         <div class="why-card">
           <div style="width:2rem; height:3px; background:var(--green); margin-bottom:0.75rem;"></div>
           <h3>Elite camera tech</h3>
           <p>The Veo Cam3 is used by professional clubs worldwide. AI-powered ball tracking, wide angle, automatic recording and more.</p>
-        </div> 
+        </div>
         <div class="why-card">
           <div style="width:2rem; height:3px; background:var(--green); margin-bottom:0.75rem;"></div>
           <h3>Coaches love it</h3>
@@ -558,78 +211,81 @@
         </div>
       </div>
     </div>
-  </section>
- 
-  <div class="divider"></div>
-
-  <!-- HOW IT WORKS -->
-  <section class="section">
-    <p class="section-label">The process</p>
-    <h2 class="section-title">We keep it simple</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h3>You Book</h3>
-        <p>Register your interest below. We'll confirm availability for your game day and lock in the details.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h3>We Record</h3>
-        <p>We arrive before kickoff, set up the Veo camera and handle everything. Nothing for your coach or manager to do.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h3>We Deliver</h3>
-        <p>After the game, your coach or manager gets a direct link to the full footage via the Veo platform. Watch, share and review.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- PRICING -->
-  <section class="section">
-    <p class="section-label">Pricing</p>
-    <h2 class="section-title">Flat rates</h2>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <p class="pricing-type">Recreational</p>
-        <div class="pricing-amount"><sup>$</sup>100</div>
-        <p class="pricing-per">per game</p>
-        <ul class="pricing-features">
-          <li>Full match recording</li>
-          <li>Live streaming — share with family & friends</li>
-          <li>Footage link delivered post-game</li>
-          <li>We handle all setup &amp; packdown</li>
-        </ul>
-      </div>
-      <div class="pricing-card featured">
-        <p class="pricing-type">Competitive</p>
-        <div class="pricing-amount"><sup>$</sup>150</div>
-        <p class="pricing-per">per game</p>
-        <ul class="pricing-features">
-          <li>Everything in <strong>Recreational</strong></li>
-          <li class="extra">Automatic event &amp; goal detection</li>
-          <li class="extra">Shot map &amp; heatmaps</li>
-          <li class="extra">Possession, passes &amp; match stats</li>
-          <li class="extra">Player of the Match</li>
-          <li class="extra">Speedrun — condensed match, dead time removed</li>
-          <li class="extra">Full match download</li>
-          <li class="extra">Player Spotlight — individual player stats</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="pricing-note">
-    <strong>Booking multiple games on the same day?</strong> Each additional game is discounted. Get in touch to discuss!
   </div>
 
   <div class="divider"></div>
 
-  <!-- AREAS WE SERVE -->
-  <section class="areas-section">
-    <div class="areas-inner">
+  <!-- HOW IT WORKS — white -->
+  <div class="band-white">
+    <div class="inner">
+      <p class="section-label">The process</p>
+      <h2 class="section-title">We keep it simple</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>You Book</h3>
+          <p>Register your interest below. We'll confirm availability for your game day and lock in the details.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>We Record</h3>
+          <p>We arrive before kickoff, set up the Veo camera and handle everything. Nothing for your coach or manager to do.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>We Deliver</h3>
+          <p>After the game, your coach or manager gets a direct link to the full footage via the Veo platform. Watch, share and review.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PRICING — grey -->
+  <div class="band-grey">
+    <div class="inner">
+      <p class="section-label">Pricing</p>
+      <h2 class="section-title">Flat rates</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <p class="pricing-type">Recreational</p>
+          <div class="pricing-amount"><sup>$</sup>100</div>
+          <p class="pricing-per">per game</p>
+          <ul class="pricing-features">
+            <li>Full match recording</li>
+            <li>Live streaming — share with family &amp; friends</li>
+            <li>Footage link delivered post-game</li>
+            <li>We handle all setup &amp; packdown</li>
+          </ul>
+        </div>
+        <div class="pricing-card featured">
+          <p class="pricing-type">Competitive</p>
+          <div class="pricing-amount"><sup>$</sup>150</div>
+          <p class="pricing-per">per game</p>
+          <ul class="pricing-features">
+            <li>Everything in <strong>Recreational</strong></li>
+            <li class="extra">Automatic event &amp; goal detection</li>
+            <li class="extra">Shot map &amp; heatmaps</li>
+            <li class="extra">Possession, passes &amp; match stats</li>
+            <li class="extra">Player of the Match</li>
+            <li class="extra">Speedrun — condensed match, dead time removed</li>
+            <li class="extra">Full match download</li>
+            <li class="extra">Player Spotlight — individual player stats</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pricing-note">
+        <strong>Booking multiple games on the same day?</strong> Each additional game is discounted. Get in touch to discuss!
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- AREAS WE SERVE — white -->
+  <div class="band-white">
+    <div class="inner">
       <p class="section-label">Where we operate</p>
       <h2 class="section-title">Melbourne North &amp; West</h2>
       <p style="color:var(--text-muted); max-width:560px; font-size:0.95rem; line-height:1.7;">
@@ -657,13 +313,13 @@
       </div>
       <p style="margin-top:1.25rem; font-size:0.8rem; color:var(--grey-light);">Not sure if we cover your area? Get in touch — we're expanding.</p>
     </div>
-  </section>
+  </div>
 
   <div class="divider"></div>
 
-  <!-- EOI / JOTFORM -->
-  <section class="eoi-section" id="register">
-    <div class="eoi-inner">
+  <!-- EOI / JOTFORM — grey -->
+  <div class="band-grey" id="register">
+    <div class="inner-800">
       <p class="section-label">Expression of Interest</p>
       <h2 class="section-title">Get your<br/><span style="color:var(--green)">games filmed.</span></h2>
       <p class="eoi-intro">
@@ -673,7 +329,7 @@
         <script type="text/javascript" src="https://form.jotform.com/jsform/260646446846063"></script>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
