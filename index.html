@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://veoforhire.com.au/" />
   <meta property="og:type" content="website" />
 
-  <!-- SEO: LocalBusiness structured data — tells Google exactly who and where you are -->
+  <!-- SEO: LocalBusiness structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,7 +78,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -90,7 +89,6 @@
       overflow-x: hidden;
     }
 
-    /* NOISE TEXTURE OVERLAY */
     body::before {
       content: '';
       position: fixed;
@@ -101,7 +99,6 @@
       opacity: 0.4;
     }
 
-    /* FIELD LINE BACKGROUND */
     .field-lines {
       position: fixed;
       top: 0; left: 0;
@@ -129,7 +126,6 @@
       background: var(--green);
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -140,13 +136,7 @@
       justify-content: space-between;
       background: linear-gradient(to bottom, rgba(255,255,255,0.97), transparent);
     }
-
-    .logo img {
-      height: 38px;
-      width: auto;
-      display: block;
-    }
-
+    .logo img { height: 38px; width: auto; display: block; }
     .nav-cta {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 500;
@@ -161,7 +151,6 @@
     }
     .nav-cta:hover { background: var(--green-dim); transform: translateY(-1px); }
 
-    /* HERO */
     .hero {
       position: relative;
       z-index: 1;
@@ -173,7 +162,6 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
     .hero-eyebrow {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
@@ -185,7 +173,6 @@
       opacity: 0;
       animation: fadeUp 0.6s ease forwards 0.2s;
     }
-
     .hero h1 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -197,13 +184,8 @@
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.35s;
     }
-
     .hero h1 .accent { color: var(--green); }
-    .hero h1 .outline {
-      -webkit-text-stroke: 2px var(--black);
-      color: transparent;
-    }
-
+    .hero h1 .outline { -webkit-text-stroke: 2px var(--black); color: transparent; }
     .hero-sub {
       font-size: 1.1rem;
       color: var(--text-muted);
@@ -213,9 +195,7 @@
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.5s;
     }
-
     .hero-sub strong { color: var(--black); font-weight: 500; }
-
     .hero-cta-group {
       display: flex;
       align-items: center;
@@ -224,7 +204,6 @@
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.65s;
     }
-
     .btn-primary {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
@@ -237,44 +216,25 @@
       text-decoration: none;
       display: inline-block;
       transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 0 0 0 rgba(0,230,77,0);
     }
     .btn-primary:hover {
       background: var(--green-dim);
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(46,158,82,0.2);
     }
+    .hero-note { font-size: 0.8rem; color: var(--grey-light); letter-spacing: 0.05em; }
 
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--grey-light);
-      letter-spacing: 0.05em;
-    }
-
-    /* SCROLL INDICATOR */
     .scroll-hint {
       position: absolute;
-      bottom: 2rem;
-      left: 2rem;
+      bottom: 2rem; left: 2rem;
       display: flex;
       align-items: center;
       gap: 0.75rem;
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 1s;
     }
-    .scroll-hint span {
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--grey-light);
-    }
-    .scroll-line {
-      width: 40px;
-      height: 1px;
-      background: var(--grey-mid);
-      position: relative;
-      overflow: hidden;
-    }
+    .scroll-hint span { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-light); }
+    .scroll-line { width: 40px; height: 1px; background: var(--grey-mid); position: relative; overflow: hidden; }
     .scroll-line::after {
       content: '';
       position: absolute;
@@ -284,7 +244,6 @@
       animation: scanline 2s ease infinite;
     }
 
-    /* HOW IT WORKS */
     .section {
       position: relative;
       z-index: 1;
@@ -292,7 +251,6 @@
       margin: 0 auto;
       padding: 3rem 2rem;
     }
-
     .section-label {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
@@ -302,7 +260,6 @@
       color: var(--green);
       margin-bottom: 1rem;
     }
-
     .section-title {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -312,14 +269,12 @@
       margin-bottom: 3.5rem;
     }
 
-    /* STEPS */
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 0;
       border: 1px solid var(--grey-mid);
     }
-
     .step {
       padding: 2.5rem 2rem;
       border-right: 1px solid var(--grey-mid);
@@ -327,8 +282,7 @@
       transition: background 0.3s;
     }
     .step:last-child { border-right: none; }
-    .step:hover { background: var(--grey); }
-
+    .step:hover, .step.active { background: var(--grey); }
     .step-num {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -338,8 +292,7 @@
       margin-bottom: 1rem;
       transition: color 0.3s;
     }
-    .step:hover .step-num { color: var(--green); }
-
+    .step:hover .step-num, .step.active .step-num { color: var(--green); }
     .step h3 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
@@ -349,43 +302,46 @@
       margin-bottom: 0.75rem;
       color: var(--black);
     }
+    .step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
-    .step p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
+    .divider { position: relative; z-index: 1; width: 100%; height: 1px; background: var(--grey-mid); }
 
-    /* DIVIDER */
-    .divider {
+    /* VIDEO SECTION */
+    .video-section {
       position: relative;
       z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border: 1px solid var(--grey-mid);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
       width: 100%;
-      height: 1px;
-      background: var(--grey-mid);
+      height: 100%;
+      border: none;
     }
 
-    /* PRICING */
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
-
     .pricing-card {
       border: 1px solid var(--grey-mid);
       padding: 2.5rem;
       position: relative;
       transition: border-color 0.3s, transform 0.3s;
     }
-    .pricing-card:hover {
-      border-color: var(--green);
-      transform: translateY(-4px);
-    }
-    .pricing-card.featured {
-      border-color: var(--green);
-      background: rgba(0,230,77,0.04);
-    }
+    .pricing-card:hover { border-color: var(--green); transform: translateY(-4px); }
+    .pricing-card.featured { border-color: var(--green); background: rgba(0,230,77,0.04); }
     .pricing-card.featured::before {
       content: 'POPULAR';
       position: absolute;
@@ -398,7 +354,6 @@
       letter-spacing: 0.15em;
       padding: 0.25rem 0.75rem;
     }
-
     .pricing-type {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
@@ -408,7 +363,6 @@
       color: var(--green);
       margin-bottom: 1rem;
     }
-
     .pricing-amount {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -417,25 +371,9 @@
       color: var(--black);
       margin-bottom: 0.25rem;
     }
-    .pricing-amount sup {
-      font-size: 1.5rem;
-      vertical-align: super;
-    }
-
-    .pricing-per {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      letter-spacing: 0.05em;
-    }
-
-    .pricing-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
+    .pricing-amount sup { font-size: 1.5rem; vertical-align: super; }
+    .pricing-per { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2rem; letter-spacing: 0.05em; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
     .pricing-features li {
       font-size: 0.9rem;
       color: var(--text-muted);
@@ -443,16 +381,12 @@
       align-items: flex-start;
       gap: 0.75rem;
     }
-    .pricing-features li::before {
-      content: '→';
-      color: var(--green);
-      flex-shrink: 0;
-      margin-top: 0.05em;
-    }
+    .pricing-features li::before { content: '→'; color: var(--green); flex-shrink: 0; margin-top: 0.05em; }
+    .pricing-features li.extra::before { content: '+'; margin-left: 5px; }
+    .pricing-features li strong { font-weight: 700; color: var(--black); margin-left: -8px; }
     .pricing-note {
       max-width: 750px;
-      margin: 0.5rem auto 3rem;
-      margin-top: 0.25rem;
+      margin: 0.25rem auto 3rem;
       padding: 1.25rem 1.5rem;
       background: rgba(46, 158, 82, 0.08);
       border-left: 4px solid var(--green);
@@ -463,23 +397,9 @@
       border-radius: 0 4px 4px 0;
     }
 
-    /* AREAS SECTION */
-    .areas-section {
-      position: relative;
-      z-index: 1;
-      background: var(--grey);
-      padding: 3rem 2rem;
-    }
-    .areas-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .areas-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.5rem;
-    }
+    .areas-section { position: relative; z-index: 1; background: var(--grey); padding: 3rem 2rem; }
+    .areas-inner { max-width: 1100px; margin: 0 auto; }
+    .areas-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
     .area-tag {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
@@ -492,36 +412,11 @@
       padding: 0.35rem 0.85rem;
     }
 
-    /* EOI SECTION */
-    .eoi-section {
-      position: relative;
-      z-index: 1;
-      background: var(--white);
-      padding: 3rem 2rem;
-    }
+    .eoi-section { position: relative; z-index: 1; background: var(--white); padding: 3rem 2rem; }
+    .eoi-inner { max-width: 800px; margin: 0 auto; }
+    .eoi-intro { font-size: 1rem; color: var(--text-muted); max-width: 520px; margin-bottom: 3rem; line-height: 1.7; }
+    .jotform-wrap { background: var(--white); border: 1px solid var(--grey-mid); padding: 2.5rem 0; overflow: visible; }
 
-    .eoi-inner {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .eoi-intro {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 520px;
-      margin-bottom: 3rem;
-      line-height: 1.7;
-    }
-
-    /* JOTFORM EMBED */
-    .jotform-wrap {
-      background: var(--white);
-      border: 1px solid var(--grey-mid);
-      padding: 2.5rem 0;
-      overflow: visible;
-    }
-
-    /* FOOTER */
     footer {
       position: relative;
       z-index: 1;
@@ -533,20 +428,9 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
+    .footer-logo img { height: 28px; width: auto; display: block; opacity: 0.8; }
+    .footer-note { font-size: 0.75rem; color: var(--grey-light); }
 
-    .footer-logo img {
-      height: 28px;
-      width: auto;
-      display: block;
-      opacity: 0.8;
-    }
-
-    .footer-note {
-      font-size: 0.75rem;
-      color: var(--grey-light);
-    }
-
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -556,7 +440,6 @@
       100% { left: 100%; }
     }
 
-    /* MOBILE */
     @media (max-width: 640px) {
       .steps { grid-template-columns: 1fr; }
       .step { border-right: none; border-bottom: 1px solid var(--grey-mid); }
@@ -564,23 +447,11 @@
       nav { padding: 1rem; }
       .hero { padding: 8rem 1.25rem 4rem; }
       .section { padding: 4rem 1.25rem; }
+      .video-section { padding: 3rem 1.25rem; }
       .eoi-section { padding: 4rem 1.25rem; }
       .areas-section { padding: 3rem 1.25rem; }
       .jotform-wrap { padding: 1.5rem; }
       footer { padding: 1.5rem 1.25rem; }
-    }
-
-    .pricing-features li.extra::before {
-      content: '+';
-      color: var(--green);
-      flex-shrink: 0;
-      margin-top: 0.05em;
-      margin-left: 5px;
-    }
-    .pricing-features li strong {
-      font-weight: 700;
-      color: var(--black);
-      margin-left: -8px;
     }
   </style>
 </head>
@@ -596,7 +467,6 @@
 
   <!-- HERO -->
   <section class="hero">
-    <!-- SEO: Eyebrow text — keyword-rich, visible to Google -->
     <p class="hero-eyebrow">Veo Camera Hire · Melbourne North &amp; West · Junior Soccer</p>
     <h1>
       Nothing Missed,<br/>
@@ -611,6 +481,7 @@
       <span class="hero-note">No commitment required</span>
     </div>
   </section>
+
   <div class="divider"></div>
 
   <!-- HOW IT WORKS -->
@@ -635,6 +506,22 @@
       </div>
     </div>
   </section>
+
+  <div class="divider"></div>
+
+  <!-- SAMPLE FOOTAGE -->
+  <div class="video-section">
+    <p class="section-label">See it in action</p>
+    <h2 class="section-title">Sample footage.</h2>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/E_XNytAKBPs"
+        title="Veo For Hire — Sample match footage"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
   <div class="divider"></div>
 
@@ -667,13 +554,14 @@
       </div>
     </div>
   </section>
+
   <div class="pricing-note">
-   <strong>Booking multiple games on the same day?</strong> Each additional game is discounted. Get in touch to discuss!
-</div>
+    <strong>Booking multiple games on the same day?</strong> Each additional game is discounted. Get in touch to discuss!
+  </div>
 
   <div class="divider"></div>
 
-  <!-- AREAS WE SERVE — SEO: suburb names on page -->
+  <!-- AREAS WE SERVE -->
   <section class="areas-section">
     <div class="areas-inner">
       <p class="section-label">Where we operate</p>
@@ -726,6 +614,20 @@
     <div class="footer-logo"><img src="logo.png" alt="Veo For Hire" /></div>
     <p class="footer-note">veoforhire.com.au &nbsp;·&nbsp; Veo camera hire for junior soccer in Melbourne</p>
   </footer>
+
+  <script>
+    const steps = document.querySelectorAll('.step');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, { threshold: 0.5 });
+    steps.forEach(step => observer.observe(step));
+  </script>
 
 </body>
 </html>
