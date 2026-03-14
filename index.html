@@ -305,6 +305,45 @@
 
     .divider { position: relative; z-index: 1; width: 100%; height: 1px; background: var(--grey-mid); }
 
+    /* WHY US SECTION */
+    .why-section {
+      position: relative;
+      z-index: 1;
+      background: var(--grey);
+      padding: 3rem 2rem;
+    }
+    .why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .why-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .why-card .why-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+    }
+    .why-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--black);
+    }
+    .why-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
     /* VIDEO SECTION */
     .video-section {
       position: relative;
@@ -492,6 +531,32 @@
   </div>
 </section>
 
+  <div class="divider"></div>
+  <!-- WHY US -->
+  <section class="why-section">
+    <div class="why-inner">
+      <p class="section-label">Why us</p>
+      <h2 class="section-title">Professional footage.<br/>Without the price tag.</h2>
+      <p style="color:var(--text-muted); max-width:580px; font-size:0.95rem; line-height:1.7; margin-bottom:0;">
+        A Veo Cam3 setup costs over <strong style="color:var(--black);">$4,000</strong> — most junior clubs and teams simply can't justify that. We've done that part so you don't have to. For $100 a game you get the same professional footage, AI tracking and match analytics that elite clubs use. No hardware to buy, no subscription to manage, no setup on game day.
+      </p>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Elite camera tech</h3>
+          <p>The Veo Cam3 is used by professional clubs worldwide. AI-powered ball tracking, wide angle, automatic recording and more.</p>
+        </div> 
+        <div class="why-card">
+          <h3>Coaches love it</h3>
+          <p>Review games, identify patterns, share clips with players. The same tools professional coaches use, at junior level.</p>
+        </div>
+        <div class="why-card">
+          <h3>Zero Subscription</h3>
+          <p>No subscription. No hardware. No setup hassle. Just flat rate footage delivered to your coach after the final whistle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
   <div class="divider"></div>
 
   <!-- HOW IT WORKS -->
