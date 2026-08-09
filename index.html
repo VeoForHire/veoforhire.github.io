@@ -58,6 +58,33 @@
       pointer-events: none; z-index: 0; opacity: 0.4;
     }
 
+    /* WHY US LAYOUT & IMAGE */
+    .why-us-hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .why-us-media {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      max-height: 380px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--grey-mid);
+    }
+
+    .veo-stand-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
     .field-lines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; opacity: 0.04; }
     .field-lines::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; border: 2px solid var(--green); border-radius: 50%; }
     .field-lines::after { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: var(--green); }
@@ -219,10 +246,22 @@
   <div class="band-white">
     <div class="inner">
       <p class="section-label">Why us</p>
-      <h2 class="section-title">Professional footage.<br/>Without the price tag.</h2>
-      <p style="color:var(--text-muted); max-width:580px; font-size:0.95rem; line-height:1.7; margin-bottom:0;">
-        A Veo Cam3 setup costs over <strong style="color:var(--black);">$4,000</strong> — most local clubs, teams, and parents simply can't justify that investment. We handle the equipment and operation so you don't have to. Get full HD panoramic footage, auto-follow camera tracking, and AI match highlights sent straight to your team.
-      </p>
+      
+      <!-- Top Row: Text + Image Side-by-Side -->
+      <div class="why-us-hero">
+        <div class="why-us-text">
+          <h2 class="section-title" style="margin-bottom: 1.5rem;">Professional footage.<br/>Without the price tag.</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-bottom:0;">
+            A Veo Cam3 setup costs over <strong style="color:var(--black);">$4,000</strong> — most local clubs, teams, and parents simply can't justify that investment. We handle the equipment and operation so you don't have to. Get full HD panoramic footage, auto-follow camera tracking, and AI match highlights sent straight to your team.
+          </p>
+        </div>
+        
+        <div class="why-us-media">
+          <img src="artwork/veo-tripod.png" alt="Veo Cam 3 setup on a high tripod stand on game day" class="veo-stand-img" />
+        </div>
+      </div>
+
+      <!-- Bottom Row: 3 Feature Cards -->
       <div class="why-grid">
         <div class="why-card">
           <div style="width:2rem; height:3px; background:var(--green); margin-bottom:0.75rem;"></div>
