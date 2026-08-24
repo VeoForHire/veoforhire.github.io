@@ -196,7 +196,7 @@
     .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.92; text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.35s; }
     .hero h1 .accent { color: var(--green); }
     .hero h1 .outline { -webkit-text-stroke: 2px var(--black); color: transparent; }
-    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.7s ease forwards 0.5s; }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 540px; line-height: 1.7; margin-bottom: 2.5rem; opacity: 10; animation: fadeUp 0.7s ease forwards 0.5s; }
     .hero-sub strong { color: var(--black); font-weight: 500; }
     .hero-cta-group { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s ease forwards 0.65s; }
     .btn-primary { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--green); padding: 1rem 2.5rem; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; }
@@ -298,9 +298,11 @@
 
   <!-- HERO -->
   <section class="hero">
-    <video autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0.2;">
-      <source src="video/sample.mp4" type="video/mp4">
-    </video>
+    <img 
+      src="artwork/seats.jpg" 
+      alt="Sports Stadium" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.25; filter: grayscale(100%) contrast(110%);"
+    />
     <div style="position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:8rem 2rem 4rem; width:100%;">
       <p class="hero-eyebrow">Veo Camera Hire · Melbourne North &amp; West · All Sports</p>
       <h1>
