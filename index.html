@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="css/calculator.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veo Camera Hire Melbourne | Multi-Sport Match Filming</title>
@@ -214,6 +215,32 @@
     .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.04rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
     .section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.5rem); text-transform: uppercase; line-height: 1; margin-bottom: 3.5rem; }
 
+    /* Live indicator pulse animation */
+    .live-pulse {
+      width: 8px;
+      height: 8px;
+      background-color: #dc2626;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+      animation: pulse-red 1.8s infinite;
+    }
+
+    @keyframes pulse-red {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+      }
+    }
+
     /* STEPS */
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; border: 1px solid var(--grey-mid); }
     .step { padding: 2.5rem 2rem; border-right: 1px solid var(--grey-mid); position: relative; transition: background 0.3s; background: var(--white); }
@@ -293,7 +320,7 @@
   <!-- NAV -->
   <nav>
     <div class="logo"><img src="artwork/logo.png" alt="Veo For Hire — Veo Camera Hire Melbourne" /></div>
-    <a href="#register" class="nav-cta">Book Now</a>
+    <a href="#register" class="nav-cta">Register Interest</a>
   </nav>
 
   <!-- HERO -->
@@ -448,80 +475,189 @@
 
   <div class="divider"></div>
 
-  <!-- PRICING -->
+ <!-- PRICING -->
   <div class="band-grey">
     <div class="inner">
       <p class="section-label">Pricing</p>
       <h2 class="section-title">Flat rate</h2>
       
-      <div class="pricing-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; align-items: start;">
-        <!-- Left Column: Pricing Card -->
-        <div class="pricing-card">
-          <p class="pricing-type">Match Filming Package</p>
-          
-          <div class="pricing-tiers" style="display: flex; flex-direction: row; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--grey-mid); padding-bottom: 1.5rem;">
-            <!-- Juniors -->
-            <div class="price-tier" style="flex: 1; border-right: 2px dashed var(--grey-mid); padding-right: 0.75rem;">
-              <div class="price-tier-label" style="color: #1a1f1a;">Standard</div>
-              <div class="price-tier-sub">Up to 60mins total game time</div>
-              <div class="pricing-amount" style="color: #1a1f1a;"><sup>$</sup>150</div>
-              <div class="pricing-per">per game</div>
-            </div>
+      <div class="pricing-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; align-items: stretch;">
+        
+        <!-- Left Column: Standard Pricing Card -->
+        <div class="pricing-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <p class="pricing-type">Match Filming Package</p>
             
-            <!-- Seniors -->
-            <div class="price-tier" style="flex: 1; padding-left: 0.75rem;">
-              <div class="price-tier-label" style="color: #1a1f1a;">Extended</div>
-              <div class="price-tier-sub">60mins+ total game time</div>
-              <div class="pricing-amount" style="color: #1a1f1a;"><sup>$</sup>200</div>
-              <div class="pricing-per">per game</div>
+            <!-- Fixed Pricing Tier Header -->
+        <div class="pricing-tiers" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--grey-mid); padding-bottom: 1.5rem;">
+          
+          <!-- Standard Tier -->
+          <div class="price-tier" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px dashed var(--grey-mid); padding-right: 0.75rem;">
+            <div>
+              <div class="price-tier-label" style="color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1;">Standard</div>
+              <div class="price-tier-sub" style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem; min-height: 2.4em; line-height: 1.2;">Up to 60mins game time</div>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <div class="pricing-amount" style="color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3.5rem; line-height: 0.9;"><sup>$</sup>150</div>
+              <div class="pricing-per" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">per game</div>
+            </div>
+          </div>
+          
+          <!-- Extended Tier -->
+          <div class="price-tier" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding-left: 0.75rem;">
+            <div>
+              <div class="price-tier-label" style="color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1;">Extended</div>
+              <div class="price-tier-sub" style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem; min-height: 2.4em; line-height: 1.2;">60mins+ game time</div>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <div class="pricing-amount" style="color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3.5rem; line-height: 0.9;"><sup>$</sup>200</div>
+              <div class="pricing-per" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">per game</div>
             </div>
           </div>
 
-          <!-- Back-to-Back Discount Banner -->
-          <div class="discount-banner" style="text-align: left; font-size: 0.875rem; color: #1a1f1a; margin-bottom: 1.5rem; font-weight: 500;">
-            <strong>Booking multiple games?</strong> Get $20 off every <strong>additional</strong> game played back-to-back (within 30 mins).
+        </div>
+            <!-- Back-to-Back Discount Banner -->
+            <div class="discount-banner" style="text-align: left; font-size: 0.875rem; color: #1a1f1a; margin-bottom: 1.5rem; font-weight: 500;">
+              <strong>Booking multiple games?</strong> Get $20 off every <strong>additional</strong> game played back-to-back (within 30 mins of each game).
+            </div>
+
+            <!-- Live-streaming option -->
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 1rem; background:#ffffff; border: 1px solid var(--green); border-radius: 4px; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="live-pulse"></span>
+                <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; color: var(--black); letter-spacing: 0.05em;">+Live Streaming</span>
+              </div>
+              <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--green);">
+                +$35 <span style="font-size: 0.75rem; font-family: 'DM Sans', sans-serif; color: var(--text-muted); font-weight: 400;">/ game</span>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li>Full match recording</li>
+              <li>We handle all setup &amp; packdown</li>
+              <li>Automatic event &amp; highlight detection</li>
+              <li>Interactive panoramic &amp; follow-cam views</li>
+              <li>Shareable match link for players, parents &amp; coaches</li>
+              <li>Condensed match / speedrun view</li>
+            </ul>
           </div>
-          <ul class="pricing-features">
-            <li>Full match recording</li>
-            <li>We handle all setup &amp; packdown</li>
-            <li>Automatic event &amp; highlight detection</li>
-            <li>Interactive panoramic &amp; follow-cam views</li>
-            <li>Shareable match link for players, parents &amp; coaches</li>
-            <li>Condensed match / speedrun view</li>
-          </ul>
+
+          <!-- Live Stream Disclaimer & Features -->
+          <div style="margin-top: 1.25rem; padding: 0.85rem 1rem; background:#ffffff; border-left: 3px solid var(--green); border-radius: 0 4px 4px 0; font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">
+            <p style="margin-bottom: 0.4rem; color: var(--black); font-weight: 500;">
+              <span class="live-pulse"></span>
+              Stream can be broadcast via Veo Live, or streamed directly to your club's <strong>YouTube / Facebook</strong> (stream key required).
+            </p>
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted);">
+              <em>Note: Subject to 4G/5G coverage at venue.</em>
+            </p>
+          </div>
         </div>
 
-        <!-- Right Column: FAQs -->
+
+        <!-- Right Column: FAQs (Updated) -->
         <div class="pricing-card" style="border-color: var(--grey-mid); background: var(--grey);">
           <p class="faq" style="color: var(--black);">FAQ</p>
           
           <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.9rem;">
             <div>
-              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">How soon can we get access to the footage?</strong>
-              <p style="color: var(--text-muted); margin: 0;">Footage is uploaded post-match and link access is usually delivered within 24 to 48 hours.</p>
+              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">How soon can we get access to full match recordings?</strong>
+              <p style="color: var(--text-muted); margin: 0;">High-definition interactive footage is uploaded post-match and delivered within 24 to 48 hours.</p>
             </div>
 
             <div style="border-top: 1px solid var(--grey-mid); padding-top: 1rem;">
-              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">Why is the Extended package priced higher?</strong>
-              <p style="color: var(--text-muted); margin: 0;">The Extended package caters for longer playing halves, larger file sizes, and more extensive player tracking.</p>
+              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">Do we need to assign someone to look after the camera?</strong>
+              <p style="color: var(--text-muted); margin: 0;">Not at all! Our operator stays on-site to handle setup, monitor recording during the match, and pack down.</p>
             </div>
             
             <div style="border-top: 1px solid var(--grey-mid); padding-top: 1rem;">
-              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">Do we need to supply power or internet?</strong>
-              <p style="color: var(--text-muted); margin: 0;">Nope! Our Veo Cam 3 setups run entirely on internal battery power and local storage.</p>
+              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">Do we need to supply power or internet connection?</strong>
+              <p style="color: var(--text-muted); margin: 0;">Nope! Our equipment runs on internal batteries. For live-streaming, we manage our own mobile cellular connection.</p>
             </div>
 
             <div style="border-top: 1px solid var(--grey-mid); padding-top: 1rem;">
-              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">Does someone stay with the camera?</strong>
-              <p style="color: var(--text-muted); margin: 0;">Yes, our operator manages set up, monitors recording during the game, and packs down.</p>
+              <strong style="color: var(--black); font-weight: 500; display: block; margin-bottom: 0.25rem;">What happens if the live stream buffers or drops signal during the game?</strong>
+              <p style="color: var(--text-muted); margin: 0;">Live streaming relies on local 4G/5G covergae. Brief drops in quality or buffering may occur depending on venue coverage and local network congestion. If a signal drop occurs, the camera continues to record offline without interruption.</p>
             </div>
+            
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
   <div class="divider"></div>
+
+    <!-- PRICING CALCULATOR SECTION -->
+  <div class="band-white" id="calculator">
+    <div class="inner-800">
+      <p class="section-label">Pricing Calculator</p>
+      <h2 class="section-title">Get an estimate</h2>
+      <div class="calc-card">
+        
+        <!-- Package Selection -->
+        <div class="calc-group">
+          <label class="calc-label">1. Select Package</label>
+          <div class="calc-options-grid">
+            <label class="calc-radio-tile">
+              <input type="radio" name="calc-package" value="150" checked onchange="calculateTotal()" />
+              <div>
+                <strong class="calc-tile-title">Standard ($150)</strong>
+                <span class="calc-tile-sub">Up to 60mins game time</span>
+              </div>
+            </label>
+            <label class="calc-radio-tile">
+              <input type="radio" name="calc-package" value="200" onchange="calculateTotal()" />
+              <div>
+                <strong class="calc-tile-title">Extended ($200)</strong>
+                <span class="calc-tile-sub">60mins+ game time</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Number of Games -->
+        <div class="calc-group">
+          <label for="calc-games" class="calc-label">2. Number of Back-to-Back Games</label>
+          <div class="calc-input-row">
+            <input type="number" id="calc-games" min="0" max="10" value="1" oninput="calculateTotal()" class="calc-number-input" />
+            <span class="calc-tile-sub">
+              ($20 off every additional back-to-back game automatically applied)
+            </span>
+          </div>
+        </div>
+
+        <!-- Live Stream Toggle -->
+        <div class="calc-toggle-box">
+          <label class="calc-toggle-tile">
+            <div class="calc-toggle-left">
+              <input type="checkbox" id="calc-stream" onchange="calculateTotal()" class="calc-checkbox" />
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  <span class="live-pulse"></span>
+                  <strong class="calc-label" style="margin-bottom: 0;">Add Live Streaming</strong>
+                </div>
+                <span class="calc-tile-sub">Broadcast live via Veo Live, YouTube, or Facebook</span>
+              </div>
+            </div>
+            <span class="calc-toggle-price">+$35 / game</span>
+          </label>
+        </div>
+
+        <!-- Result Summary Box -->
+        <div class="calc-result-box">
+          <div>
+            <span class="calc-result-label">Estimated Total</span>
+            <div class="calc-result-price" id="calc-total-price">$150</div>
+            <span class="calc-result-savings" id="calc-savings"></span>
+          </div>
+          <a href="#register" class="btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Book These Games</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- AREAS WE SERVE -->
   <div class="band-white">
@@ -551,7 +687,7 @@
         <span class="area-tag">Glenroy</span>
         <span class="area-tag">Sydenham</span>
       </div>
-      <p style="margin-top:1.25rem; font-size:0.8rem; color:var(--grey-light);">Not sure if we cover your venue or sporting code? Get in touch — we're expanding.</p>
+      <p style="margin-top:1.25rem; font-size:0.8rem; color:var(--grey-light);">Not sure if we cover your venue or sporting code? Get in touch — we're expanding!</p>
     </div>
   </div>
 
@@ -563,20 +699,20 @@
       <p class="section-label">Expression of Interest</p>
       <h2 class="section-title">Get your<br/><span style="color:var(--green)">games filmed.</span></h2>
       <p class="eoi-intro">
-        Tell us about your team, sport, and match dates. We'll be in touch to confirm availability. No commitment required — just let us know you're interested.
+        Tell us about your team, sport, and match dates. We'll be in touch to confirm availability.
       </p>
       <div class="jotform-wrap">
         <script type="text/javascript" src="https://form.jotform.com/jsform/260646446846063"></script>
       </div>
     </div>
   </div>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo"><img src="artwork/logo.png" alt="Veo For Hire" /></div>
     <p class="footer-note">veoforhire.com.au &nbsp;·&nbsp; Veo camera hire for all sports across Melbourne</p>
   </footer>
 
+  <script src="js/calculator.js"></script>
   <!-- Step Active State Observer -->
   <script>
     const steps = document.querySelectorAll('.step');
@@ -666,5 +802,6 @@
 
     videoObserver.observe(sliderContainer);
   </script>
+    
 </body>
 </html>
