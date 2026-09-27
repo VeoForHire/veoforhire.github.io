@@ -517,9 +517,15 @@
 
         </div>
             <!-- Back-to-Back Discount Banner -->
-            <div class="discount-banner" style="text-align: left; font-size: 0.875rem; color: #1a1f1a; margin-bottom: 1.5rem; font-weight: 500;">
-              <strong>Booking multiple games?</strong> Get $20 off every <strong>additional</strong> game played back-to-back (within 30 mins of each game).
-            </div>
+        <div class="discount-banner" style="background: #ffffff; border: 1.5px solid var(--green); border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.25rem;">
+            <strong style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; text-transform: uppercase; color: var(--black); letter-spacing: 0.03em;">Multi-Game Discount</strong>
+            <span style="background: var(--green); color: #ffffff; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.9rem; padding: 0.15rem 0.5rem; border-radius: 3px; letter-spacing: 0.05em;">SAVE $20</span>
+          </div>
+          <p style="font-size: 0.825rem; color: var(--black); margin: 0; line-height: 1.35;">
+            Get <strong>$20 off</strong> every additional game played back-to-back <span style="color: var(--text-muted); font-size: 0.75rem;">(within 30 mins)</span>.
+          </p>
+        </div>
 
             <!-- Live-streaming option -->
             <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 1rem; background:#ffffff; border: 1px solid var(--green); border-radius: 4px; margin-bottom: 1.5rem;">
@@ -622,9 +628,6 @@
           <label for="calc-games" class="calc-label">2. Number of Back-to-Back Games</label>
           <div class="calc-input-row">
             <input type="number" id="calc-games" min="0" max="10" value="1" oninput="calculateTotal()" class="calc-number-input" />
-            <span class="calc-tile-sub">
-              ($20 off every additional back-to-back game automatically applied)
-            </span>
           </div>
         </div>
 
