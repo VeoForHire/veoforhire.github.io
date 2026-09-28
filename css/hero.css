@@ -1,0 +1,133 @@
+/* Make logo invert to bright white/green on dark hero */
+.logo img { 
+  height: 38px; 
+  width: auto; 
+  display: block; 
+  filter: brightness(0) invert(1); 
+}
+
+/* HERO CONTAINER */
+.hero { 
+  position: relative; 
+  z-index: 1; 
+  min-height: 90vh; 
+  display: flex; 
+  align-items: center; 
+  overflow: hidden; 
+  background: #0d120e; 
+}
+
+.hero-bg-img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center 30%; 
+  z-index: 0;
+}
+
+/* GRADIENT OVERLAY (Dark on Left for Text, Lighter on Right for Camera) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg, 
+    rgba(10, 15, 12, 0.82) 0%, 
+    rgba(10, 15, 12, 0.88) 60%, 
+    rgba(10, 15, 12, 0.95) 100%
+  ) !important;
+}
+
+.hero-content {
+  position: relative; 
+  z-index: 2; 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 9rem 2rem 5rem; 
+  width: 100%;
+}
+
+.hero-eyebrow {
+  color: #38c168 !important; /* Vibrant bright green */
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.hero h1 { 
+  font-family: 'Barlow Condensed', sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(3.5rem, 10vw, 8rem); 
+  line-height: 0.92; 
+  text-transform: uppercase; 
+  letter-spacing: -0.01em; 
+  margin-bottom: 2rem; 
+  color: #ffffff; 
+}
+
+.hero h1 .accent { 
+  color: #38c168; 
+}
+
+.hero h1 .outline {
+  -webkit-text-stroke: 2px #ffffff !important;
+  color: transparent !important;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* BODY TEXT CONTRAST FIX */
+.hero-sub {
+  color: #e2ebe2 !important; /* High contrast light grey */
+  font-weight: 400 !important; /* Slightly thicker weight for better legibility on mobile */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Drop shadow to separate text from background */
+  max-width: 540px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-sub strong {
+  color: #ffffff !important; /* Pure white bold words */
+  font-weight: 700 !important;
+}
+
+.hero-note { 
+  font-size: 0.85rem; 
+  color: #a3b8a3; 
+  letter-spacing: 0.05em; 
+}
+
+/* MOBILE ADAPTATION */
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(
+      180deg, 
+      rgba(10, 15, 12, 0.90) 0%, 
+      rgba(10, 15, 12, 0.75) 100%
+    );
+  }
+}
+
+/* --- DESKTOP HERO & VEO CAMERA POSITIONING FIX --- */
+@media (min-width: 769px) {
+  /* Prevent the top of the Veo camera/mast from getting cropped off */
+  .hero-bg-img {
+    object-position: 90% top !important; /* Aligns photo to top and pushes camera to the right */
+  }
+
+  /* Split gradient so text stays dark on left, camera visible on right */
+  .hero-overlay {
+    background: linear-gradient(
+      90deg, 
+      rgba(10, 15, 12, 0.95) 0%, 
+      rgba(10, 15, 12, 0.85) 45%, 
+      rgba(10, 15, 12, 0.25) 100%
+    ) !important;
+  }
+
+  /* Extra top padding so content doesn't sit under fixed navbar */
+  .hero-content {
+    padding-top: 10rem !important;
+  }
+}
