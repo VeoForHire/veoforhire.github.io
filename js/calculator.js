@@ -13,7 +13,7 @@ function calculateTotal() {
   // 3. Check if live streaming is selected
   const streamInput = document.getElementById('calc-stream');
   const isStreaming = streamInput ? streamInput.checked : false;
-  const streamCost = isStreaming ? 35 : 0;
+  const streamCost = isStreaming ? 45 : 0;
 
   // 4. Calculate total with $20 discount on additional games
   const perGameCost = basePrice + streamCost;
